@@ -102,6 +102,9 @@ Tags: full-site-editing, block-patterns, one-column, wide-blocks, editor-style, 
 .c-statement { padding-block: var(--section-pad); }
 .c-section { margin-block: 0; }
 
+/* Header, main and footer butt up: no flow gap between them. */
+.wp-site-blocks > * { margin-block-start: 0; }
+
 /* Full-bleed bands butt up against each other: no flow gap between them. */
 .c-main > * { margin-block-start: 0; }
 
@@ -291,7 +294,6 @@ input[type="radio"]:disabled { border-color: var(--muted); background: var(--pap
    right. At 40em and below both navs go (when the script runs) and the
    wordmark moves left beside the two buttons. */
 .c-masthead { position: relative; }
-.c-header { padding-inline: 0; }
 .c-header__bar {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -331,7 +333,6 @@ input[type="radio"]:disabled { border-color: var(--muted); background: var(--pap
 .has-js .c-iconbtn--search { display: inline-flex; }
 .has-js .c-header:has(.c-nav--secondary .wp-block-navigation-item:nth-child(2)) .c-iconbtn--menu { display: inline-flex; }
 .c-nav--secondary .wp-block-navigation-item:nth-child(n+2) { display: none; }
-.c-nav--secondary:not(:has(.wp-block-navigation-item:nth-child(2))) { display: flex; }
 
 .c-iconbtn {
   align-items: center;
@@ -505,7 +506,7 @@ input[type="radio"]:disabled { border-color: var(--muted); background: var(--pap
 .c-menu-nav .wp-block-navigation-submenu__toggle::after { transform: rotate(90deg); }
 .c-menu-nav .wp-block-navigation-submenu__toggle[aria-expanded="true"]::after { display: none; }
 
-.c-menu-nav .wp-block-navigation__submenu-container {
+.wp-block-navigation.c-menu-nav .wp-block-navigation__submenu-container {
   display: none;
   position: static;
   grid-column: 1 / -1;
@@ -522,8 +523,8 @@ input[type="radio"]:disabled { border-color: var(--muted); background: var(--pap
   flex-direction: column;
   list-style: none;
 }
-.c-menu-nav .wp-block-navigation-submenu__toggle[aria-expanded="true"] ~ .wp-block-navigation__submenu-container { display: flex; }
-.c-menu-nav .wp-block-navigation__submenu-container .wp-block-navigation-item__content {
+.wp-block-navigation.c-menu-nav .wp-block-navigation-submenu__toggle[aria-expanded="true"] ~ .wp-block-navigation__submenu-container { display: flex; }
+.wp-block-navigation.c-menu-nav .wp-block-navigation__submenu-container .wp-block-navigation-item__content {
   display: block;
   padding-block: 0.5rem;
   font-family: var(--mono);
@@ -985,6 +986,7 @@ html.has-scroll-lock { overflow: hidden; }
 .c-footer__base > * { margin: 0; }
 .c-list-plain,
 .c-list-plain ul { list-style: none; margin: 0; padding: 0; }
+.c-footer .wp-block-categories li:nth-child(n+7) { display: none; }
 .c-footer .wp-block-categories a { display: inline-block; padding-block: 0.25rem; }
 
 /* --- Single post and page --------------------------------------------------------------------- */
@@ -1377,3 +1379,20 @@ figure.wp-block-gallery.has-nested-images.is-cropped figure.wp-block-image:not(#
 .wp-block-post-content > .wp-audio-shortcode {
   max-width: min(100%, var(--wp--style--global--content-size));
 }
+
+/* Long words and titles wrap rather than push the page sideways. */
+.c-post-nav > *,
+.c-comment__head > *,
+.c-comment__body { min-width: 0; max-width: 100%; }
+.c-post-nav a,
+.c-comment__head > *,
+.c-comment__body { overflow-wrap: anywhere; }
+@media (max-width: 40em) {
+  .c-comments ol.children,
+  .c-comments .wp-block-comment-template ol { margin-left: 1.25rem; }
+  .c-comment { grid-template-columns: 2.5rem minmax(0, 1fr); gap: 1rem; }
+}
+.c-title-band h1,
+.c-not-found h1 { overflow-wrap: anywhere; }
+.c-num { white-space: nowrap; }
+.c-card__meta .c-cat { text-align: right; }

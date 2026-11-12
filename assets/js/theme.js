@@ -161,7 +161,7 @@
 				event.preventDefault();
 				first.focus();
 			}
-		} );
+		}, true );
 
 		window.addEventListener( 'resize', measure );
 		measure();

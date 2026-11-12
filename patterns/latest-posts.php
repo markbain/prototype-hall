@@ -24,7 +24,7 @@
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:query {"queryId":2,"query":{"perPage":3,"postType":"post","inherit":false},"className":"c-posts"} -->
+	<!-- wp:query {"queryId":2,"query":{"perPage":3,"postType":"post","inherit":false,"sticky":"ignore"},"className":"c-posts"} -->
 	<div class="wp-block-query c-posts">
 		<!-- wp:post-template {"className":"is-style-grid","layout":{"type":"default"}} -->
 			<!-- wp:group {"className":"c-card","layout":{"type":"default"}} -->
