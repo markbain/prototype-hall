@@ -1,0 +1,74 @@
+/* ==========================================================================
+   PrototypeHall - foundation
+   Reset, base and layout. Layered.
+   Tokens are NOT defined here: theme.json is the single source of truth and
+   emits them as --wp--preset--* / --wp--custom--*. This file only aliases
+   them to short authoring names.
+   See the wp-block-theme skill, "The layer contract", for why components are not layered.
+   ========================================================================== */
+
+@layer reset, base, layout;
+
+:root {
+  --base:        var(--wp--preset--color--base);
+  --contrast:    var(--wp--preset--color--contrast);
+  --placeholder: var(--wp--preset--color--placeholder);
+  --muted:       var(--wp--preset--color--muted);
+
+  --gut: var(--wp--custom--gutter);
+}
+
+@layer reset {
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; overflow-x: clip; }
+  img, svg, video { max-width: 100%; height: auto; }
+  /* Classic content carries fixed widths: oEmbed iframes a width attribute,
+     and pre never wraps. */
+  iframe, embed, object { max-width: 100%; }
+  pre { max-width: 100%; overflow-x: auto; }
+  /* [caption] loses its inline width in functions.php. Size the figure to its
+     image instead; the caption text wraps to that width rather than setting it. */
+  .wp-caption { width: fit-content; max-width: 100%; }
+  .wp-caption-text { contain: inline-size; }
+  button, input, select, textarea { font: inherit; color: inherit; }
+}
+
+@layer base {
+  body {
+    background: var(--base);
+    color: var(--contrast);
+  }
+
+  :where(h1, h2, h3, h4, h5, h6) { text-wrap: balance; }
+  :where(p, li) { text-wrap: pretty; }
+
+  a { text-underline-offset: 3px; }
+
+  :where(a, button, .wp-block-button__link, input, textarea, select):focus-visible {
+    outline: 2px solid var(--contrast);
+    outline-offset: 3px;
+  }
+
+  .skip-link:focus {
+    position: fixed; inset-block-start: 0.5rem; inset-inline-start: 0.5rem;
+    width: auto; height: auto; clip-path: none;
+    z-index: 999; background: var(--contrast); color: var(--base); padding: 0.75rem 1rem;
+  }
+}
+
+@layer layout {
+  /* Containment is WordPress's job: theme.json sets contentSize, wideSize and
+     root padding, and useRootPaddingAwareAlignments lets .alignfull break out.
+     This is the one escape hatch, for a full-bleed element inside a
+     constrained group where alignfull is not available. */
+  .u-bleed {
+    width: 100vw;
+    margin-inline: calc(50% - 50vw);
+    max-width: 100vw;
+  }
+
+  /* Vertical rhythm. Elements override locally with --flow-space. */
+  .u-flow > * + * { margin-block-start: var(--flow-space, 1em); }
+  .u-flow :where(h1, h2, h3, h4) { --flow-space: 1.4em; }
+}

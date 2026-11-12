@@ -1,0 +1,144 @@
+/*
+Theme Name: PrototypeHall
+Theme URI: https://bain.design/prototype-hall
+Author: Bain Design
+Author URI: https://bain.design
+Description: Placeholder description for PrototypeHall, to be written before submission.
+Requires at least: 6.6
+Tested up to: 7.1
+Requires PHP: 7.4
+Version: 0.1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: prototype-hall
+Domain Path: /languages
+Tags: full-site-editing, block-patterns, one-column, wide-blocks, editor-style, translation-ready
+*/
+
+/* ==========================================================================
+   Components. Deliberately unlayered - see the wp-block-theme skill, "The layer contract".
+   Single-class selectors only, so plugin CSS stays overridable.
+   ========================================================================== */
+
+/* A placeholder image: an empty cover block reads as a labelled grey box, and
+   a real image dropped into the cover simply covers it. */
+.c-placeholder {
+  background: var(--placeholder);
+  border: 2px dashed var(--contrast);
+}
+
+.c-placeholder .wp-block-cover__inner-container {
+  text-align: center;
+  color: var(--contrast);
+}
+
+/* The header's Site Logo renders nothing until a logo is set; once it does,
+   the logo replaces the Site Title. Its alt text is the site name. */
+.c-brand:has(.custom-logo) .wp-block-site-title { display: none; }
+
+/* Accessibility floor. Zero specificity (:where), so any theme or plugin rule
+   still wins.
+   - Core drops the search field's outline when the button sits inside the
+     box; ring the box instead.
+   - Form fields take the page's inks, so a dark palette never puts light
+     text on the browser's white field.
+   - List and comment links set in small type stay 24px touch targets
+     (WCAG 2.2, 2.5.8). */
+:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper:has(.wp-block-search__input:focus-visible)) {
+  outline: 2px solid var(--contrast);
+  outline-offset: 3px;
+}
+:where(input:not([type="submit"], [type="button"], [type="checkbox"], [type="radio"], [type="range"]), textarea, select) {
+  background-color: var(--base);
+  color: var(--contrast);
+}
+:where(.wp-block-archives-list, .wp-block-categories-list, .wp-block-page-list:not(.wp-block-navigation *), .wp-block-rss__item-title, .wp-block-breadcrumbs, .wp-block-comment-author-name, .wp-block-comment-date, .wp-block-comment-reply-link, .wp-block-comment-edit-link) a {
+  display: inline-block;
+  padding-block: 0.2em;
+}
+.comment-reply-title { font-size: var(--wp--preset--font-size--medium); }
+/* Core stripes tables in a fixed light grey; a dark palette's light text
+   can't be read on it. Core's own selector, so this one replaces it. */
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) { background-color: var(--placeholder); }
+
+/* Anything carrying this class is copy waiting to be written. */
+.c-todo {
+  outline: 2px dashed var(--muted);
+  outline-offset: 4px;
+}
+
+/*
+  Classic [gallery] shortcode. Block themes get no core gallery CSS (html5
+  support turns it off), so the items would stack one per row. A grid with
+  the column count from the shortcode, at wide size rather than the text
+  column (AC-011, AC-012). Thumbnails keep their own size.
+*/
+.wp-block-post-content > .gallery { max-width: var(--wp--style--global--wide-size); }
+.gallery {
+  --gallery-cols: 3;
+  display: grid;
+  grid-template-columns: repeat(var(--gallery-cols), minmax(0, 1fr));
+  gap: var(--wp--preset--spacing--20);
+}
+.gallery-columns-1 { --gallery-cols: 1; }
+.gallery-columns-2 { --gallery-cols: 2; }
+.gallery-columns-4 { --gallery-cols: 4; }
+.gallery-columns-5 { --gallery-cols: 5; }
+.gallery-columns-6 { --gallery-cols: 6; }
+.gallery-columns-7 { --gallery-cols: 7; }
+.gallery-columns-8 { --gallery-cols: 8; }
+.gallery-columns-9 { --gallery-cols: 9; }
+.gallery-item { margin: 0; }
+.gallery-icon { text-align: center; }
+.gallery-icon img { display: inline-block; }
+@media (max-width: 37.5em) {
+  .gallery:not(.gallery-columns-1) { --gallery-cols: 2; }
+}
+
+/*
+  Gallery block captions sit under the image, not over it. Core overlays
+  them on a gradient with a capped height that scrolls, and that scroll box
+  can't take keyboard focus, so a long caption is out of reach. Covers the
+  current gallery (nested image blocks) and the legacy one (ul of items),
+  which lays its figure out as a row. figure.wp-block-gallery outranks
+  core's selectors whichever stylesheet loads last.
+*/
+figure.wp-block-gallery.has-nested-images figure.wp-block-image:has(figcaption)::before { content: none; }
+figure.wp-block-gallery:not(.has-nested-images) .blocks-gallery-item figure {
+  flex-direction: column;
+  align-items: stretch;
+}
+figure.wp-block-gallery.has-nested-images figure.wp-block-image figcaption,
+figure.wp-block-gallery:not(.has-nested-images) .blocks-gallery-item figcaption {
+  position: static;
+  max-height: none;
+  overflow: visible;
+  flex-grow: 0;
+  padding: 0.5em 0 0;
+  background: none;
+  color: inherit;
+  text-shadow: none;
+  text-align: start;
+}
+/* A cropped gallery fills each image to its row height, which a caption
+   now takes out of. Crop to one shape instead, so every image in a row
+   lines up and captions of any length hang below. */
+figure.wp-block-gallery.is-cropped .blocks-gallery-item figure,
+figure.wp-block-gallery.has-nested-images.is-cropped figure.wp-block-image { justify-content: flex-start; }
+figure.wp-block-gallery:not(.has-nested-images).is-cropped .blocks-gallery-item :is(a, img),
+figure.wp-block-gallery.has-nested-images.is-cropped figure.wp-block-image:not(#individual-image) :is(a, img) {
+  flex: none;
+  height: auto;
+}
+figure.wp-block-gallery:not(.has-nested-images).is-cropped .blocks-gallery-item img,
+figure.wp-block-gallery.has-nested-images.is-cropped figure.wp-block-image:not(#individual-image) img { aspect-ratio: 4 / 3; }
+
+/*
+  The [audio] player sizes itself in JavaScript from its parent's outer
+  width, padding included, so in padded full-width post content it comes out
+  wider than the column. Cap it at the column, as core's layout would.
+*/
+.wp-block-post-content > .mejs-container,
+.wp-block-post-content > .wp-audio-shortcode {
+  max-width: min(100%, var(--wp--style--global--content-size));
+}
