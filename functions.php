@@ -51,6 +51,17 @@ if ( ! function_exists( 'bd324_prototype_hall_enqueue_styles' ) ) :
 			'path',
 			get_parent_theme_file_path( 'style.css' )
 		);
+
+		wp_enqueue_script(
+			'bd324-prototype-hall-theme',
+			get_parent_theme_file_uri( 'assets/js/theme.js' ),
+			array(),
+			$version,
+			array(
+				'strategy'  => 'defer',
+				'in_footer' => true,
+			)
+		);
 	}
 endif;
 add_action( 'wp_enqueue_scripts', 'bd324_prototype_hall_enqueue_styles' );
@@ -215,3 +226,25 @@ if ( ! function_exists( 'bd324_prototype_hall_blog_home_title' ) ) :
 	}
 endif;
 add_filter( 'render_block_core/query-title', 'bd324_prototype_hall_blog_home_title', 10, 2 );
+
+if ( ! function_exists( 'bd324_prototype_hall_js_flag' ) ) :
+	/**
+	 * Marks the document as scripted before first paint.
+	 *
+	 * The menu and search buttons, and the panel and dialog they open, exist
+	 * only when the theme script runs. Without this class the navigation stays
+	 * visible at every width and the buttons stay hidden, so a visitor without
+	 * JavaScript is never left without a menu.
+	 *
+	 * @since PrototypeHall 0.1.0
+	 *
+	 * @return void
+	 */
+	function bd324_prototype_hall_js_flag() {
+		wp_print_inline_script_tag( "document.documentElement.classList.add('has-js');" );
+	}
+endif;
+add_action( 'wp_head', 'bd324_prototype_hall_js_flag', 1 );
+
+require get_parent_theme_file_path( 'inc/block-styles.php' );
+require get_parent_theme_file_path( 'inc/render.php' );

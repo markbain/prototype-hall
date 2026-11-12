@@ -9,13 +9,51 @@
 
 @layer reset, base, layout;
 
+/* Short authoring names for the palette. The surface variables (--edge, --shade,
+   --ring, --btn-*) are what components read; a surface class in style.css
+   (.s-ground, .s-deep) re-points them, so a component is written once. */
 :root {
-  --base:        var(--wp--preset--color--base);
-  --contrast:    var(--wp--preset--color--contrast);
-  --placeholder: var(--wp--preset--color--placeholder);
-  --muted:       var(--wp--preset--color--muted);
+  --ground:          var(--wp--preset--color--ground);
+  --on-ground:       var(--wp--preset--color--on-ground);
+  --paper:           var(--wp--preset--color--paper);
+  --paper-2:         var(--wp--preset--color--paper-2);
+  --ink:             var(--wp--preset--color--ink);
+  --muted:           var(--wp--preset--color--muted);
+  --deep:            var(--wp--preset--color--deep);
+  --on-deep:         var(--wp--preset--color--on-deep);
+  --deep-label:      var(--wp--preset--color--deep-label);
+  --deep-muted:      var(--wp--preset--color--deep-muted);
+  --deep-para:       var(--wp--preset--color--deep-para);
+  --deep-rule:       var(--wp--preset--color--deep-rule);
+  --pop:             var(--wp--preset--color--pop);
+  --on-pop:          var(--wp--preset--color--on-pop);
+  --ray:             var(--wp--preset--color--ray);
+  --frame:           var(--wp--preset--color--frame);
+  --frame-edge:      var(--wp--preset--color--frame-edge);
+  --focus:           var(--wp--preset--color--focus);
+  --focus-on-ground: var(--wp--preset--color--focus-on-ground);
+  --focus-on-deep:   var(--wp--preset--color--focus-on-deep);
+
+  --serif: var(--wp--preset--font-family--serif);
+  --mono:  var(--wp--preset--font-family--mono);
 
   --gut: var(--wp--custom--gutter);
+
+  /* Surface defaults: paper. */
+  --edge: var(--ink);
+  --shade: var(--ink);
+  --ring: var(--focus);
+  --btn-bg: var(--pop);
+  --btn-fg: var(--on-pop);
+  --btn-edge: var(--ink);
+  --btn-shade: var(--ink);
+  --muted-on: var(--muted);
+
+  /* Section padding: s9 large, s7 at the nav breakpoint and below. */
+  --section-pad: var(--wp--preset--spacing--90);
+}
+@media (max-width: 40em) {
+  :root { --section-pad: var(--wp--preset--spacing--70); }
 }
 
 @layer reset {
@@ -36,8 +74,8 @@
 
 @layer base {
   body {
-    background: var(--base);
-    color: var(--contrast);
+    background: var(--paper);
+    color: var(--ink);
   }
 
   :where(h1, h2, h3, h4, h5, h6) { text-wrap: balance; }
@@ -45,15 +83,19 @@
 
   a { text-underline-offset: 3px; }
 
-  :where(a, button, .wp-block-button__link, input, textarea, select):focus-visible {
-    outline: 2px solid var(--contrast);
+  a { text-decoration-thickness: 2px; text-underline-offset: 0.3em; }
+
+  /* Focus is never removed: 3px, offset 3px, in the focus token of the
+     surface it sits on. */
+  :where(a, button, .wp-block-button__link, input, textarea, select, summary, [tabindex]):focus-visible {
+    outline: 3px solid var(--ring);
     outline-offset: 3px;
   }
 
   .skip-link:focus {
     position: fixed; inset-block-start: 0.5rem; inset-inline-start: 0.5rem;
     width: auto; height: auto; clip-path: none;
-    z-index: 999; background: var(--contrast); color: var(--base); padding: 0.75rem 1rem;
+    z-index: 999; background: var(--ink); color: var(--paper); padding: 0.75rem 1rem;
   }
 }
 

@@ -1,0 +1,111 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Forest and lime",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "ground",
+					"color": "#0F3D2E",
+					"name": "Ground"
+				},
+				{
+					"slug": "on-ground",
+					"color": "#F4EEE3",
+					"name": "On ground"
+				},
+				{
+					"slug": "paper",
+					"color": "#F4EEE3",
+					"name": "Paper"
+				},
+				{
+					"slug": "paper-2",
+					"color": "#EAE2D2",
+					"name": "Paper 2"
+				},
+				{
+					"slug": "ink",
+					"color": "#06201A",
+					"name": "Ink"
+				},
+				{
+					"slug": "muted",
+					"color": "#35463F",
+					"name": "Muted"
+				},
+				{
+					"slug": "deep",
+					"color": "#06201A",
+					"name": "Deep"
+				},
+				{
+					"slug": "on-deep",
+					"color": "#F4EEE3",
+					"name": "On deep"
+				},
+				{
+					"slug": "deep-label",
+					"color": "#C6F432",
+					"name": "Deep label"
+				},
+				{
+					"slug": "deep-muted",
+					"color": "#A8BDB3",
+					"name": "Deep muted"
+				},
+				{
+					"slug": "deep-para",
+					"color": "#CFD9D3",
+					"name": "Deep paragraph"
+				},
+				{
+					"slug": "deep-rule",
+					"color": "#1F5A46",
+					"name": "Deep rule"
+				},
+				{
+					"slug": "pop",
+					"color": "#C6F432",
+					"name": "Pop"
+				},
+				{
+					"slug": "on-pop",
+					"color": "#06201A",
+					"name": "On pop"
+				},
+				{
+					"slug": "ray",
+					"color": "#C6F432",
+					"name": "Ray"
+				},
+				{
+					"slug": "frame",
+					"color": "#C6F432",
+					"name": "Frame"
+				},
+				{
+					"slug": "frame-edge",
+					"color": "#F4EEE3",
+					"name": "Frame edge"
+				},
+				{
+					"slug": "focus",
+					"color": "#06201A",
+					"name": "Focus"
+				},
+				{
+					"slug": "focus-on-ground",
+					"color": "#C6F432",
+					"name": "Focus on ground"
+				},
+				{
+					"slug": "focus-on-deep",
+					"color": "#C6F432",
+					"name": "Focus on deep"
+				}
+			]
+		}
+	}
+}

@@ -6,18 +6,41 @@ Requires PHP: 7.4
 Stable tag: 0.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: full-site-editing, block-patterns, one-column, wide-blocks, editor-style, translation-ready
+Tags: full-site-editing, block-patterns, one-column, wide-blocks, editor-style, translation-ready, custom-colors, style-variations
 
 == Description ==
 
-The Bain Theme Factory block theme prototype-hall. Deliberately undesigned:
-monochrome, Comic Sans, grey placeholder boxes. Every factory theme starts as a
-copy of it. It is never submitted itself.
+PrototypeHall is a loud, flat, typographic block theme for a studio, lab,
+gallery or journal that wants its work to look like a printed specimen sheet.
+The page is divided into slabs of flat colour: a saturated ground for the
+header and title bands, cream paper for reading, and a near-black deep ground
+for the footer, the open menu and the search modal. Nothing is glossy, nothing
+is rounded, and every shadow is hard.
+
+* A display serif against uppercase mono labels.
+* Two-pixel borders with hard offset shadows on anything that is an object.
+* A saturated ground with a slowly turning ring of rays around a striped sun.
+
+It ships three palettes as style variations (vermilion, ultraviolet, forest and
+lime), two post layouts (grid and list) switchable in the editor, a header with
+a menu panel and a search modal, a ticker strip, a statement band with an open
+call card, and a sign-up row. Every pattern is built from blocks; no sample
+posts or photographs are included.
 
 == Fonts ==
 
-No fonts are bundled. The theme uses the system Comic Sans MS stack, falling
-back to cursive.
+Both families are bundled with the theme, so no request goes to a font service.
+Each is licensed under the SIL Open Font License 1.1, and the licence files sit
+beside the fonts in assets/fonts.
+
+* Fraunces, by the Fraunces Project Authors: https://github.com/undercasetype/Fraunces
+* DM Mono, by the DM Mono Project Authors: https://github.com/googlefonts/dm-mono
+
+== Sign-up row ==
+
+The sign-up row is a placeholder. No newsletter service is wired in, the form
+sends nowhere, and the consent line is placeholder text. Point the form at a
+handler of your own, or replace it with a form plugin's block.
 
 == Copyright ==
 
@@ -36,4 +59,4 @@ PARTICULAR PURPOSE. See the GNU General Public License for more details.
 == Changelog ==
 
 = 0.1.0 =
-* Initial prototype-hall, forked from the bones of Broadsheet.
+* Initial release.
