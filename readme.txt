@@ -17,7 +17,7 @@ header and title bands, cream paper for reading, and a near-black deep ground
 for the footer, the open menu and the search modal. Nothing is glossy, nothing
 is rounded, and every shadow is hard.
 
-* A display serif against uppercase mono labels.
+* A heavy grotesque against uppercase mono labels.
 * Two-pixel borders with hard offset shadows on anything that is an object.
 * A saturated ground with a slowly turning ring of rays around a striped sun.
 
@@ -35,7 +35,7 @@ Both families are bundled with the theme, so no request goes to a font service.
 Each is licensed under the SIL Open Font License 1.1, and the licence files sit
 beside the fonts in assets/fonts.
 
-* Fraunces, by the Fraunces Project Authors: https://github.com/undercasetype/Fraunces
+* Bricolage Grotesque, by the Bricolage Grotesque Project Authors: https://github.com/ateliertriay/bricolage
 * DM Mono, by the DM Mono Project Authors: https://github.com/googlefonts/dm-mono
 
 == Sign-up row ==

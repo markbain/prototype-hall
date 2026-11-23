@@ -125,26 +125,17 @@
 			"lineHeight": true,
 			"fontFamilies": [
 				{
-					"slug": "serif",
-					"name": "Fraunces",
-					"fontFamily": "\"Fraunces\", Georgia, \"Times New Roman\", serif",
+					"slug": "grotesque",
+					"name": "Bricolage Grotesque",
+					"fontFamily": "\"Bricolage Grotesque\", \"Helvetica Neue\", Arial, sans-serif",
 					"fontFace": [
 						{
-							"fontFamily": "Fraunces",
-							"fontWeight": "400 600",
+							"fontFamily": "Bricolage Grotesque",
+							"fontWeight": "400 800",
 							"fontStyle": "normal",
 							"fontDisplay": "swap",
 							"src": [
-								"file:./assets/fonts/fraunces.woff2"
-							]
-						},
-						{
-							"fontFamily": "Fraunces",
-							"fontWeight": "400 500",
-							"fontStyle": "italic",
-							"fontDisplay": "swap",
-							"src": [
-								"file:./assets/fonts/fraunces-italic.woff2"
+								"file:./assets/fonts/bricolage-grotesque.woff2"
 							]
 						}
 					]
@@ -396,7 +387,7 @@
 			"text": "var(--wp--preset--color--ink)"
 		},
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--serif)",
+			"fontFamily": "var(--wp--preset--font-family--grotesque)",
 			"fontSize": "var(--wp--preset--font-size--medium)",
 			"lineHeight": "1.65",
 			"fontWeight": "400"
@@ -430,10 +421,10 @@
 			},
 			"heading": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--serif)",
-					"fontWeight": "500",
+					"fontFamily": "var(--wp--preset--font-family--grotesque)",
+					"fontWeight": "700",
 					"lineHeight": "1.05",
-					"letterSpacing": "-0.025em"
+					"letterSpacing": "-0.03em"
 				}
 			},
 			"h1": {
@@ -456,14 +447,14 @@
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--heading-4)",
 					"lineHeight": "1.15",
-					"letterSpacing": "-0.02em"
+					"letterSpacing": "-0.03em"
 				}
 			},
 			"h5": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--heading-5)",
 					"lineHeight": "1.25",
-					"letterSpacing": "-0.01em"
+					"letterSpacing": "-0.02em"
 				}
 			},
 			"h6": {
@@ -564,10 +555,10 @@
 				},
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--heading-3)",
-					"fontStyle": "italic",
-					"fontWeight": "500",
+					"fontStyle": "normal",
+					"fontWeight": "600",
 					"lineHeight": "1.2",
-					"letterSpacing": "-0.015em"
+					"letterSpacing": "0"
 				},
 				"spacing": {
 					"padding": {
@@ -607,7 +598,7 @@
 					}
 				},
 				"typography": {
-					"fontStyle": "italic",
+					"fontStyle": "normal",
 					"fontSize": "1.375rem",
 					"lineHeight": "1.4"
 				},

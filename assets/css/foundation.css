@@ -34,7 +34,7 @@
   --focus-on-ground: var(--wp--preset--color--focus-on-ground);
   --focus-on-deep:   var(--wp--preset--color--focus-on-deep);
 
-  --serif: var(--wp--preset--font-family--serif);
+  --grotesque: var(--wp--preset--font-family--grotesque);
   --mono:  var(--wp--preset--font-family--mono);
 
   --gut: var(--wp--custom--gutter);

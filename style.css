@@ -2,7 +2,7 @@
 Theme Name: PrototypeHall
 Author: Bain Design
 Author URI: https://bain.design
-Description: A loud, flat, typographic block theme that sets a site like a printed specimen sheet: slabs of flat colour, a display serif against mono labels, and hard offset shadows. Three palettes.
+Description: A loud, flat, typographic block theme that sets a site like a printed specimen sheet: slabs of flat colour, a heavy grotesque against mono labels, and hard offset shadows. Three palettes.
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 7.4
@@ -71,9 +71,9 @@ Tags: full-site-editing, block-patterns, one-column, wide-blocks, editor-style, 
 .c-lead { max-width: var(--wp--custom--lead-measure); line-height: 1.55; margin: 0; }
 .c-wordmark,
 .c-wordmark a {
-  font-family: var(--serif);
+  font-family: var(--grotesque);
   font-size: var(--wp--preset--font-size--wordmark);
-  font-weight: 600;
+  font-weight: 800;
   line-height: 0.95;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -322,7 +322,7 @@ input[type="radio"]:disabled { border-color: var(--muted); background: var(--pap
 .c-nav .wp-block-navigation-item__content:hover { text-decoration: underline; text-decoration-thickness: 0.22em; background: transparent; color: inherit; }
 .c-nav [aria-current] { text-decoration: underline; }
 .c-nav--footer .wp-block-navigation__container { gap: 0.5rem; }
-.c-nav--footer .wp-block-navigation-item__content { font-family: var(--serif); font-size: var(--wp--preset--font-size--small); letter-spacing: 0; text-transform: none; text-decoration: none; padding-block: 0.25rem; display: inline-block; }
+.c-nav--footer .wp-block-navigation-item__content { font-family: var(--grotesque); font-size: var(--wp--preset--font-size--small); letter-spacing: 0; text-transform: none; text-decoration: none; padding-block: 0.25rem; display: inline-block; }
 .c-nav--footer .wp-block-navigation-item__content:hover { text-decoration: underline; }
 .c-nav--secondary { justify-content: flex-end; }
 
@@ -425,7 +425,7 @@ input[type="radio"]:disabled { border-color: var(--muted); background: var(--pap
   .c-menu-panel__tools { padding-top: 0; }
 }
 
-/* The menu list: ruled rows with a mono numeral, a display-serif link, and a
+/* The menu list: ruled rows with a mono numeral, a display-grotesque link, and a
    bordered square toggle for a link that has children. Every level beyond the
    first takes the second level's look. */
 .c-menu-nav { margin-top: 1rem; counter-reset: menu-item; }
@@ -452,11 +452,11 @@ input[type="radio"]:disabled { border-color: var(--muted); background: var(--pap
   align-items: baseline;
   gap: 1.25rem;
   padding-block: 0.875rem;
-  font-family: var(--serif);
+  font-family: var(--grotesque);
   font-size: var(--wp--preset--font-size--menu-link);
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.05;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.03em;
   text-transform: none;
   text-decoration: none;
   color: var(--on-deep);
@@ -588,10 +588,10 @@ input[type="radio"]:disabled { border-color: var(--muted); background: var(--pap
 .c-dialog__close .wp-block-button__link::after { transform: rotate(-45deg); }
 .c-dialog .c-search { max-width: none; }
 .c-dialog .wp-block-search__input {
-  font-family: var(--serif);
+  font-family: var(--grotesque);
   font-size: var(--wp--preset--font-size--search-field);
-  font-weight: 500;
-  letter-spacing: -0.025em;
+  font-weight: 700;
+  letter-spacing: -0.03em;
   line-height: 1.1;
   background: transparent;
   border: 0;
@@ -798,7 +798,7 @@ html.has-scroll-lock { overflow: hidden; }
   overflow: hidden;
 }
 .c-date { color: var(--muted); }
-.c-card .wp-block-post-title { font-weight: 500; }
+.c-card .wp-block-post-title { font-weight: 700; }
 .c-card .wp-block-post-title a { text-decoration: none; }
 .c-card .wp-block-post-title a:hover { background: transparent; color: inherit; text-decoration: underline; text-underline-offset: 0.2em; }
 /* The whole card is the target: the title link stretches over it. */
@@ -827,8 +827,8 @@ html.has-scroll-lock { overflow: hidden; }
 .c-card:hover .c-thumb { transform: translate(-3px, -3px); box-shadow: 9px 9px 0 var(--ink); }
 .c-thumb--none { display: flex; align-items: center; justify-content: center; color: var(--on-pop); }
 .c-thumb__initial {
-  font-family: var(--serif);
-  font-weight: 500;
+  font-family: var(--grotesque);
+  font-weight: 700;
   font-size: var(--wp--preset--font-size--initial);
   line-height: 1;
   letter-spacing: -0.04em;
@@ -866,9 +866,9 @@ html.has-scroll-lock { overflow: hidden; }
 .is-style-list .c-num { grid-area: num; display: flex; flex-direction: column; }
 .is-style-list .c-num::after {
   content: counter(post-no, decimal-leading-zero);
-  font-family: var(--serif);
+  font-family: var(--grotesque);
   font-size: var(--wp--preset--font-size--numeral);
-  font-weight: 500;
+  font-weight: 700;
   line-height: 0.9;
   letter-spacing: -0.04em;
   text-transform: none;
@@ -959,7 +959,7 @@ html.has-scroll-lock { overflow: hidden; }
 .c-not-found { padding-block: var(--wp--preset--spacing--70) var(--wp--preset--spacing--90); }
 .c-not-found__inner { display: flex; flex-direction: column; align-items: flex-start; gap: var(--wp--preset--spacing--60); }
 .c-not-found__inner > * { margin: 0; }
-.c-not-found__code { line-height: 1; letter-spacing: -0.04em; font-weight: 500; }
+.c-not-found__code { line-height: 1; letter-spacing: -0.04em; font-weight: 700; }
 .c-not-found .wp-block-search { width: 100%; }
 
 /* --- Footer ------------------------------------------------------------------------------- */
@@ -1061,12 +1061,12 @@ html.has-scroll-lock { overflow: hidden; }
   margin: 0;
 }
 .c-author-box .wp-block-post-author__name {
-  font-family: var(--serif);
+  font-family: var(--grotesque);
   font-size: var(--wp--preset--font-size--heading-4);
-  font-weight: 500;
+  font-weight: 700;
   margin: 0.25rem 0;
 }
-.c-author-box .wp-block-post-author__bio { color: var(--muted); font-style: italic; font-size: var(--wp--preset--font-size--small); line-height: 1.55; max-width: 34ch; margin: 0.5rem 0 0; }
+.c-author-box .wp-block-post-author__bio { color: var(--muted); font-size: var(--wp--preset--font-size--small); line-height: 1.55; max-width: 34ch; margin: 0.5rem 0 0; }
 
 .c-post-nav { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.5rem; }
 .c-post-nav > * { margin: 0; }
@@ -1236,7 +1236,7 @@ html.has-scroll-lock { overflow: hidden; }
 .wp-block-categories li,
 .wp-block-archives li { color: var(--muted); font-family: var(--mono); font-size: var(--wp--preset--font-size--label); letter-spacing: 0.12em; }
 .wp-block-categories li a,
-.wp-block-archives li a { color: var(--ink); font-family: var(--serif); font-size: var(--wp--preset--font-size--small); letter-spacing: 0; text-decoration: none; }
+.wp-block-archives li a { color: var(--ink); font-family: var(--grotesque); font-size: var(--wp--preset--font-size--small); letter-spacing: 0; text-decoration: none; }
 .wp-block-categories li a:hover,
 .wp-block-archives li a:hover { text-decoration: underline; }
 .wp-block-latest-posts li,
@@ -1256,7 +1256,7 @@ html.has-scroll-lock { overflow: hidden; }
   text-transform: uppercase;
 }
 .wp-block-latest-comments__comment-excerpt { display: none; }
-.s-deep .wp-block-categories li { border: 0; padding-block: 0; color: inherit; font-family: var(--serif); font-size: var(--wp--preset--font-size--small); letter-spacing: 0; }
+.s-deep .wp-block-categories li { border: 0; padding-block: 0; color: inherit; font-family: var(--grotesque); font-size: var(--wp--preset--font-size--small); letter-spacing: 0; }
 .s-deep .wp-block-categories li:last-child { border: 0; }
 .s-deep .wp-block-categories li a { color: inherit; }
 
