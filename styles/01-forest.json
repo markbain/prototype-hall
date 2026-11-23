@@ -12,17 +12,17 @@
 				},
 				{
 					"slug": "on-ground",
-					"color": "#F4EEE3",
+					"color": "#F5F6F8",
 					"name": "On ground"
 				},
 				{
 					"slug": "paper",
-					"color": "#F4EEE3",
+					"color": "#F5F6F8",
 					"name": "Paper"
 				},
 				{
 					"slug": "paper-2",
-					"color": "#EAE2D2",
+					"color": "#E4E7EC",
 					"name": "Paper 2"
 				},
 				{
@@ -42,7 +42,7 @@
 				},
 				{
 					"slug": "on-deep",
-					"color": "#F4EEE3",
+					"color": "#F5F6F8",
 					"name": "On deep"
 				},
 				{
@@ -87,7 +87,7 @@
 				},
 				{
 					"slug": "frame-edge",
-					"color": "#F4EEE3",
+					"color": "#F5F6F8",
 					"name": "Frame edge"
 				},
 				{

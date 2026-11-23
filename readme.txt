@@ -13,20 +13,19 @@ Tags: full-site-editing, block-patterns, one-column, wide-blocks, editor-style, 
 PrototypeHall is a loud, flat, typographic block theme for a studio, lab,
 gallery or journal that wants its work to look like a printed specimen sheet.
 The page is divided into slabs of flat colour: a saturated ground for the
-header and title bands, cream paper for reading, and a near-black deep ground
-for the footer, the open menu and the search modal. Nothing is glossy, nothing
-is rounded, and every shadow is hard.
+header and title bands, off-white paper for reading, and a near-black deep
+ground for the footer, the open menu and the search modal. Nothing is glossy,
+nothing is rounded, and every shadow is hard.
 
 * A heavy grotesque against uppercase mono labels.
 * Two-pixel borders with hard offset shadows on anything that is an object.
 * A saturated ground with a slowly turning ring of rays around a striped sun.
 
-It ships three palettes, ultraviolet by default and vermilion and forest and
-lime as style variations, two post layouts (grid and list) switchable in the
-editor, a header with
-a menu panel and a search modal, a ticker strip, a statement band with an open
-call card, and a sign-up row. Every pattern is built from blocks; no sample
-posts or photographs are included.
+It ships two palettes, ultraviolet by default and forest and lime as a style
+variation, two post layouts (grid and list) switchable in the editor, a header
+with a menu panel and a search modal, a ticker strip, a statement band with an
+open call card, and a sign-up row. Every pattern is built from blocks; no
+sample posts or photographs are included.
 
 Named after the Culture ship *Contents May Differ* in Iain M. Banks's *The Hydrogen Sonata*.
 
