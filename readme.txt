@@ -27,6 +27,8 @@ a menu panel and a search modal, a ticker strip, a statement band with an open
 call card, and a sign-up row. Every pattern is built from blocks; no sample
 posts or photographs are included.
 
+Named after the Culture ship *Contents May Differ* in Iain M. Banks's *The Hydrogen Sonata*.
+
 == Fonts ==
 
 Both families are bundled with the theme, so no request goes to a font service.
