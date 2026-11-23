@@ -21,11 +21,11 @@ nothing is rounded, and every shadow is hard.
 * Two-pixel borders with hard offset shadows on anything that is an object.
 * A saturated ground with a slowly turning ring of rays around a striped sun.
 
-It ships two palettes, ultraviolet by default and forest and lime as a style
-variation, two post layouts (grid and list) switchable in the editor, a header
-with a menu panel and a search modal, a ticker strip, a statement band with an
-open call card, and a sign-up row. Every pattern is built from blocks; no
-sample posts or photographs are included.
+It ships three palettes, bubblegum pink by default and acid lime and
+ultraviolet as style variations, two post layouts (grid and list) switchable in
+the editor, a header with a menu panel and a search modal, a ticker strip, a
+statement band with an open call card, and a sign-up row. Every pattern is
+built from blocks; no sample posts or photographs are included.
 
 Named after the Culture ship *Contents May Differ* in Iain M. Banks's *The Hydrogen Sonata*.
 

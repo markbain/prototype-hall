@@ -18,12 +18,12 @@
 			"palette": [
 				{
 					"slug": "ground",
-					"color": "#5E2EF2",
+					"color": "#FF5CA8",
 					"name": "Ground"
 				},
 				{
 					"slug": "on-ground",
-					"color": "#F5F6F8",
+					"color": "#1A0A12",
 					"name": "On ground"
 				},
 				{
@@ -38,17 +38,17 @@
 				},
 				{
 					"slug": "ink",
-					"color": "#12082E",
+					"color": "#1A0A12",
 					"name": "Ink"
 				},
 				{
 					"slug": "muted",
-					"color": "#3F3858",
+					"color": "#4A3A42",
 					"name": "Muted"
 				},
 				{
 					"slug": "deep",
-					"color": "#12082E",
+					"color": "#1A0A12",
 					"name": "Deep"
 				},
 				{
@@ -58,37 +58,37 @@
 				},
 				{
 					"slug": "deep-label",
-					"color": "#B9A6FF",
+					"color": "#FF8FC2",
 					"name": "Deep label"
 				},
 				{
 					"slug": "deep-muted",
-					"color": "#B4AAD0",
+					"color": "#B9A9B1",
 					"name": "Deep muted"
 				},
 				{
 					"slug": "deep-para",
-					"color": "#D5CCF0",
+					"color": "#DCCFD5",
 					"name": "Deep paragraph"
 				},
 				{
 					"slug": "deep-rule",
-					"color": "#3A2B7A",
+					"color": "#4A2E3B",
 					"name": "Deep rule"
 				},
 				{
 					"slug": "pop",
-					"color": "#5E2EF2",
+					"color": "#FF5CA8",
 					"name": "Pop"
 				},
 				{
 					"slug": "on-pop",
-					"color": "#F5F6F8",
+					"color": "#1A0A12",
 					"name": "On pop"
 				},
 				{
 					"slug": "ray",
-					"color": "#F5F6F8",
+					"color": "#1A0A12",
 					"name": "Ray"
 				},
 				{
@@ -98,17 +98,17 @@
 				},
 				{
 					"slug": "frame-edge",
-					"color": "#12082E",
+					"color": "#1A0A12",
 					"name": "Frame edge"
 				},
 				{
 					"slug": "focus",
-					"color": "#12082E",
+					"color": "#1A0A12",
 					"name": "Focus"
 				},
 				{
 					"slug": "focus-on-ground",
-					"color": "#F5F6F8",
+					"color": "#1A0A12",
 					"name": "Focus on ground"
 				},
 				{

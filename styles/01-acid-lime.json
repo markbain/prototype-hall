@@ -1,18 +1,18 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "Forest and lime",
+	"title": "Acid lime",
 	"settings": {
 		"color": {
 			"palette": [
 				{
 					"slug": "ground",
-					"color": "#0F3D2E",
+					"color": "#C6F432",
 					"name": "Ground"
 				},
 				{
 					"slug": "on-ground",
-					"color": "#F5F6F8",
+					"color": "#10170A",
 					"name": "On ground"
 				},
 				{
@@ -27,17 +27,17 @@
 				},
 				{
 					"slug": "ink",
-					"color": "#06201A",
+					"color": "#10170A",
 					"name": "Ink"
 				},
 				{
 					"slug": "muted",
-					"color": "#35463F",
+					"color": "#3C4634",
 					"name": "Muted"
 				},
 				{
 					"slug": "deep",
-					"color": "#06201A",
+					"color": "#10170A",
 					"name": "Deep"
 				},
 				{
@@ -52,17 +52,17 @@
 				},
 				{
 					"slug": "deep-muted",
-					"color": "#A8BDB3",
+					"color": "#AAB79F",
 					"name": "Deep muted"
 				},
 				{
 					"slug": "deep-para",
-					"color": "#CFD9D3",
+					"color": "#D3DCCB",
 					"name": "Deep paragraph"
 				},
 				{
 					"slug": "deep-rule",
-					"color": "#1F5A46",
+					"color": "#2E3A22",
 					"name": "Deep rule"
 				},
 				{
@@ -72,32 +72,32 @@
 				},
 				{
 					"slug": "on-pop",
-					"color": "#06201A",
+					"color": "#10170A",
 					"name": "On pop"
 				},
 				{
 					"slug": "ray",
-					"color": "#C6F432",
+					"color": "#10170A",
 					"name": "Ray"
 				},
 				{
 					"slug": "frame",
-					"color": "#C6F432",
+					"color": "#F5F6F8",
 					"name": "Frame"
 				},
 				{
 					"slug": "frame-edge",
-					"color": "#F5F6F8",
+					"color": "#10170A",
 					"name": "Frame edge"
 				},
 				{
 					"slug": "focus",
-					"color": "#06201A",
+					"color": "#10170A",
 					"name": "Focus"
 				},
 				{
 					"slug": "focus-on-ground",
-					"color": "#C6F432",
+					"color": "#10170A",
 					"name": "Focus on ground"
 				},
 				{
