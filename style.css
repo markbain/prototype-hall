@@ -1396,3 +1396,12 @@ figure.wp-block-gallery.has-nested-images.is-cropped figure.wp-block-image:not(#
 .c-not-found h1 { overflow-wrap: anywhere; }
 .c-num { white-space: nowrap; }
 .c-card__meta .c-cat { text-align: right; }
+
+/* No italics anywhere (brief 3.3): the typeface has no italic face, so the
+   browser would synthesise an oblique. Emphasis is weight and size. The quote
+   rule is as specific as core's large-quote italic so it wins on any load order. */
+em, i, cite, dfn, address, var { font-style: normal; }
+.wp-site-blocks .wp-block-quote p,
+.wp-site-blocks .wp-block-quote.is-style-large p,
+.wp-site-blocks .wp-block-quote cite,
+.wp-site-blocks .wp-block-pullquote cite { font-style: normal; }
