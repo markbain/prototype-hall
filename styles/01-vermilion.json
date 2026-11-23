@@ -1,18 +1,18 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "Ultraviolet",
+	"title": "Vermilion",
 	"settings": {
 		"color": {
 			"palette": [
 				{
 					"slug": "ground",
-					"color": "#5E2EF2",
+					"color": "#FF4B1F",
 					"name": "Ground"
 				},
 				{
 					"slug": "on-ground",
-					"color": "#F4EEE3",
+					"color": "#140C09",
 					"name": "On ground"
 				},
 				{
@@ -27,17 +27,17 @@
 				},
 				{
 					"slug": "ink",
-					"color": "#12082E",
+					"color": "#140C09",
 					"name": "Ink"
 				},
 				{
 					"slug": "muted",
-					"color": "#3F3858",
+					"color": "#4A3E36",
 					"name": "Muted"
 				},
 				{
 					"slug": "deep",
-					"color": "#12082E",
+					"color": "#140C09",
 					"name": "Deep"
 				},
 				{
@@ -47,37 +47,37 @@
 				},
 				{
 					"slug": "deep-label",
-					"color": "#B9A6FF",
+					"color": "#FF8A6B",
 					"name": "Deep label"
 				},
 				{
 					"slug": "deep-muted",
-					"color": "#B4AAD0",
+					"color": "#B9AD9F",
 					"name": "Deep muted"
 				},
 				{
 					"slug": "deep-para",
-					"color": "#D5CCF0",
+					"color": "#D8CEC0",
 					"name": "Deep paragraph"
 				},
 				{
 					"slug": "deep-rule",
-					"color": "#3A2B7A",
+					"color": "#5A4D44",
 					"name": "Deep rule"
 				},
 				{
 					"slug": "pop",
-					"color": "#5E2EF2",
+					"color": "#FF4B1F",
 					"name": "Pop"
 				},
 				{
 					"slug": "on-pop",
-					"color": "#F4EEE3",
+					"color": "#140C09",
 					"name": "On pop"
 				},
 				{
 					"slug": "ray",
-					"color": "#F4EEE3",
+					"color": "#140C09",
 					"name": "Ray"
 				},
 				{
@@ -87,17 +87,17 @@
 				},
 				{
 					"slug": "frame-edge",
-					"color": "#12082E",
+					"color": "#140C09",
 					"name": "Frame edge"
 				},
 				{
 					"slug": "focus",
-					"color": "#12082E",
+					"color": "#140C09",
 					"name": "Focus"
 				},
 				{
 					"slug": "focus-on-ground",
-					"color": "#F4EEE3",
+					"color": "#140C09",
 					"name": "Focus on ground"
 				},
 				{

@@ -21,8 +21,9 @@ is rounded, and every shadow is hard.
 * Two-pixel borders with hard offset shadows on anything that is an object.
 * A saturated ground with a slowly turning ring of rays around a striped sun.
 
-It ships three palettes as style variations (vermilion, ultraviolet, forest and
-lime), two post layouts (grid and list) switchable in the editor, a header with
+It ships three palettes, ultraviolet by default and vermilion and forest and
+lime as style variations, two post layouts (grid and list) switchable in the
+editor, a header with
 a menu panel and a search modal, a ticker strip, a statement band with an open
 call card, and a sign-up row. Every pattern is built from blocks; no sample
 posts or photographs are included.
