@@ -28,7 +28,7 @@
 			</div>
 			<!-- /wp:group -->
 
-			<!-- wp:post-title {"level":3,"isLink":true,"fontSize":"heading-3"} /-->
+			<!-- wp:post-title {"level":2,"isLink":true,"fontSize":"heading-3"} /-->
 
 			<!-- wp:post-excerpt {"excerptLength":22,"className":"c-excerpt","fontSize":"small"} /-->
 
