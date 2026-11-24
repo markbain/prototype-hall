@@ -66,8 +66,6 @@ if ( ! function_exists( 'bd324_prototype_hall_enqueue_styles' ) ) :
 			'bd324-prototype-hall-theme',
 			'var bd324PrototypeHallTicker = ' . wp_json_encode(
 				array(
-					'pause'      => __( 'Pause', 'prototype-hall' ),
-					'play'       => __( 'Play', 'prototype-hall' ),
 					'pauseLabel' => __( 'Pause announcements', 'prototype-hall' ),
 					'playLabel'  => __( 'Play announcements', 'prototype-hall' ),
 				)

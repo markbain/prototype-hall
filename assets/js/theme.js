@@ -169,7 +169,7 @@
 	}
 
 	// Ticker: double the items for a seamless loop, hide the copy from
-	// assistive technology, and add a Pause/Play button so the motion can be
+	// assistive technology, and add a pause/play icon button so the motion can be
 	// stopped from the keyboard (WCAG 2.2.2); it also pauses on hover (CSS).
 	// Skipped under reduced motion, where the lines stay wrapped and still and
 	// there is nothing to pause.
@@ -177,7 +177,6 @@
 	var words = window.bd324PrototypeHallTicker || {};
 	var setToggle = function ( ticker, button, paused ) {
 		ticker.classList.toggle( 'is-paused', paused );
-		button.textContent = paused ? ( words.play || 'Play' ) : ( words.pause || 'Pause' );
 		button.setAttribute( 'aria-label', paused ? ( words.playLabel || 'Play announcements' ) : ( words.pauseLabel || 'Pause announcements' ) );
 	};
 	var setupTicker = function () {
@@ -214,7 +213,8 @@
 			if ( ! toggle ) {
 				toggle = document.createElement( 'button' );
 				toggle.type = 'button';
-				toggle.className = 'c-ticker__toggle c-label';
+				toggle.className = 'c-ticker__toggle';
+				toggle.innerHTML = '<span class="c-ticker__icon" aria-hidden="true"></span>';
 				toggle.addEventListener( 'click', function () {
 					setToggle( ticker, toggle, ! ticker.classList.contains( 'is-paused' ) );
 				} );
