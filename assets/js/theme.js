@@ -142,8 +142,10 @@
 			}
 			var scope = active === 'menu' ? panel : dialog;
 			var items = scope ? focusables( scope ) : [];
+			// The menu button sits before the panel in the document, so it
+			// heads the list: first and last then match the real Tab order.
 			if ( active === 'menu' && menuBtn ) {
-				items.push( menuBtn );
+				items.unshift( menuBtn );
 			}
 			if ( ! items.length ) {
 				return;
