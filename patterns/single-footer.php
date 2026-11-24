@@ -7,7 +7,7 @@
  * Description: The tail of a single post: tags, the author box, and the previous and next links.
  *
  * @package PrototypeHall
- * @since PrototypeHall 0.1.0
+ * @since PrototypeHall 1.0.0
  */
 
 ?>

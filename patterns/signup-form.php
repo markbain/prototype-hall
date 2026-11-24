@@ -7,7 +7,7 @@
  * Description: Placeholder email form for the sign-up row. It is not wired to any service: it is markup no core block can express, so it is custom HTML. Point its action at a handler, or replace it with a form plugin's block.
  *
  * @package PrototypeHall
- * @since PrototypeHall 0.1.0
+ * @since PrototypeHall 1.0.0
  */
 
 ?>

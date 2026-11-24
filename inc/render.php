@@ -8,7 +8,7 @@
  * other blocks are untouched.
  *
  * @package PrototypeHall
- * @since PrototypeHall 0.1.0
+ * @since PrototypeHall 1.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -19,7 +19,7 @@ if ( ! function_exists( 'bd324_prototype_hall_has_class' ) ) :
 	/**
 	 * Whether a parsed block carries a class.
 	 *
-	 * @since PrototypeHall 0.1.0
+	 * @since PrototypeHall 1.0.0
 	 *
 	 * @param array  $block The parsed block.
 	 * @param string $class The class to look for.
@@ -36,7 +36,7 @@ if ( ! function_exists( 'bd324_prototype_hall_thumb_fallback' ) ) :
 	 * Replaces an empty featured image with the typographic tile: the first
 	 * letter of the title, large, so a card or a post head never collapses.
 	 *
-	 * @since PrototypeHall 0.1.0
+	 * @since PrototypeHall 1.0.0
 	 *
 	 * @param string   $content  The rendered block, empty when the post has no image.
 	 * @param array    $block    The parsed block.
@@ -66,7 +66,7 @@ if ( ! function_exists( 'bd324_prototype_hall_highlight' ) ) :
 	/**
 	 * Wraps the searched words in a mark, in result titles and excerpts.
 	 *
-	 * @since PrototypeHall 0.1.0
+	 * @since PrototypeHall 1.0.0
 	 *
 	 * @param string $content The rendered block.
 	 * @return string
@@ -99,7 +99,7 @@ if ( ! function_exists( 'bd324_prototype_hall_page_label' ) ) :
 	 * Shows "Page" in the category slot of a page result. A page has no
 	 * categories, so the Post Terms block renders nothing there.
 	 *
-	 * @since PrototypeHall 0.1.0
+	 * @since PrototypeHall 1.0.0
 	 *
 	 * @param string   $content  The rendered block.
 	 * @param array    $block    The parsed block.
@@ -126,7 +126,7 @@ if ( ! function_exists( 'bd324_prototype_hall_page_of' ) ) :
 	 * Turns the pagination numbers into one line, "Page 2 of 4". The design
 	 * has Newer and Older only, no numbered pagination.
 	 *
-	 * @since PrototypeHall 0.1.0
+	 * @since PrototypeHall 1.0.0
 	 *
 	 * @param string $content The rendered block.
 	 * @param array  $block   The parsed block.
@@ -164,7 +164,7 @@ if ( ! function_exists( 'bd324_prototype_hall_result_count' ) ) :
 	 * Fills the %d in the archive and search count lines with the number of
 	 * posts the main query found.
 	 *
-	 * @since PrototypeHall 0.1.0
+	 * @since PrototypeHall 1.0.0
 	 *
 	 * @param string $content The rendered block.
 	 * @param array  $block   The parsed block.

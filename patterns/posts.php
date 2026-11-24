@@ -7,7 +7,7 @@
  * Description: The query loop used by the index, home, archive and search templates. Two layouts, picked as a block style on the Post Template: Grid (the default) and List.
  *
  * @package PrototypeHall
- * @since PrototypeHall 0.1.0
+ * @since PrototypeHall 1.0.0
  */
 
 ?>

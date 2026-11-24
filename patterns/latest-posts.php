@@ -6,7 +6,7 @@
  * Description: The front page's feature: a section label, a link to all posts and the three newest posts as a grid, whatever layout the site's listings use.
  *
  * @package PrototypeHall
- * @since PrototypeHall 0.1.0
+ * @since PrototypeHall 1.0.0
  */
 
 ?>

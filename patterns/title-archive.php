@@ -7,7 +7,7 @@
  * Description: Ground band for category, tag, author and date archives: breadcrumb, headline, count line and description.
  *
  * @package PrototypeHall
- * @since PrototypeHall 0.1.0
+ * @since PrototypeHall 1.0.0
  */
 
 ?>

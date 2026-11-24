@@ -7,7 +7,7 @@
  * Description: Ground band for search results: the count, the search term as the headline, and a search field.
  *
  * @package PrototypeHall
- * @since PrototypeHall 0.1.0
+ * @since PrototypeHall 1.0.0
  */
 
 ?>

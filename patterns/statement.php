@@ -6,7 +6,7 @@
  * Description: A ground band: a mono label, a large statement, a short paragraph and two buttons beside an open-call card.
  *
  * @package PrototypeHall
- * @since PrototypeHall 0.1.0
+ * @since PrototypeHall 1.0.0
  */
 
 ?>

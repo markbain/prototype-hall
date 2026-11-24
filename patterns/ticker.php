@@ -6,7 +6,7 @@
  * Description: A thin deep band of mono lines that travel slowly right to left. Edit the lines by hand. Static and wrapped when motion is reduced.
  *
  * @package PrototypeHall
- * @since PrototypeHall 0.1.0
+ * @since PrototypeHall 1.0.0
  */
 
 ?>

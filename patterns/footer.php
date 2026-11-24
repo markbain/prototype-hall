@@ -7,7 +7,7 @@
  * Description: Wordmark and site description, three link columns, and the base line.
  *
  * @package PrototypeHall
- * @since PrototypeHall 0.1.0
+ * @since PrototypeHall 1.0.0
  */
 
 $home = esc_url( home_url( '/' ) );

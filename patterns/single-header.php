@@ -7,7 +7,7 @@
  * Description: The head of a single post: category chip, date, time to read, the title, the author row and the featured image.
  *
  * @package PrototypeHall
- * @since PrototypeHall 0.1.0
+ * @since PrototypeHall 1.0.0
  */
 
 ?>

@@ -6,7 +6,7 @@
  * Description: A paper-2 band between two rules: a label, a heading and a one-line promise beside an email field, a button and a consent line.
  *
  * @package PrototypeHall
- * @since PrototypeHall 0.1.0
+ * @since PrototypeHall 1.0.0
  */
 
 ?>

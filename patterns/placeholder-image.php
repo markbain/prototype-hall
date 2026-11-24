@@ -6,7 +6,7 @@
  * Description: A bordered, shadowed tile filled with one of four patterns (rings, crossed lines, wedges, dots) that cycle by position. Drop an image into the cover to replace it.
  *
  * @package PrototypeHall
- * @since PrototypeHall 0.1.0
+ * @since PrototypeHall 1.0.0
  */
 
 ?>

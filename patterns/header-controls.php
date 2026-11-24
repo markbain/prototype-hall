@@ -7,7 +7,7 @@
  * Description: The search and menu buttons. Two buttons are markup no core block can express (they carry a state that assistive technology reads), so this one pattern holds them as custom HTML.
  *
  * @package PrototypeHall
- * @since PrototypeHall 0.1.0
+ * @since PrototypeHall 1.0.0
  */
 
 ?>

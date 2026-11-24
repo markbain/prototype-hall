@@ -7,7 +7,7 @@
  * Description: Shown by the search template when nothing matches: a bordered, shadowed panel with a label, a heading, one line of help and a search field.
  *
  * @package PrototypeHall
- * @since PrototypeHall 0.1.0
+ * @since PrototypeHall 1.0.0
  */
 
 ?>

@@ -6,7 +6,7 @@
  * Description: The front-page opener: eyebrow, display headline, lead and two buttons beside a ring of rays around a framed, striped sun.
  *
  * @package PrototypeHall
- * @since PrototypeHall 0.1.0
+ * @since PrototypeHall 1.0.0
  */
 
 ?>

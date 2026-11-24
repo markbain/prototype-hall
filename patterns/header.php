@@ -7,7 +7,7 @@
  * Description: Wordmark, primary and secondary navigation, the search and menu buttons, and the two states they open: the menu panel and the search modal.
  *
  * @package PrototypeHall
- * @since PrototypeHall 0.1.0
+ * @since PrototypeHall 1.0.0
  */
 
 $home = esc_url( home_url( '/' ) );

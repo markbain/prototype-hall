@@ -7,7 +7,7 @@
  * Description: The 404 content: a ground band with a label, an enormous 404, a heading, one line of help, a search field and a link back to the journal.
  *
  * @package PrototypeHall
- * @since PrototypeHall 0.1.0
+ * @since PrototypeHall 1.0.0
  */
 
 ?>

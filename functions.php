@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package PrototypeHall
- * @since PrototypeHall 0.1.0
+ * @since PrototypeHall 1.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -21,7 +21,7 @@ if ( ! function_exists( 'bd324_prototype_hall_enqueue_styles' ) ) :
 	 * of style.css, which fixes the load order: reset / base / layout (layered)
 	 * first, components (unlayered) second. See the wp-block-theme skill, "The layer contract".
 	 *
-	 * @since PrototypeHall 0.1.0
+	 * @since PrototypeHall 1.0.0
 	 *
 	 * @return void
 	 */
@@ -71,7 +71,7 @@ if ( ! function_exists( 'bd324_prototype_hall_editor_style' ) ) :
 	 * Enqueues the same two stylesheets in the editors, so what an editor sees
 	 * matches the front end.
 	 *
-	 * @since PrototypeHall 0.1.0
+	 * @since PrototypeHall 1.0.0
 	 *
 	 * @return void
 	 */
@@ -90,7 +90,7 @@ if ( ! function_exists( 'bd324_prototype_hall_pattern_categories' ) ) :
 	/**
 	 * Registers the theme's pattern category.
 	 *
-	 * @since PrototypeHall 0.1.0
+	 * @since PrototypeHall 1.0.0
 	 *
 	 * @return void
 	 */
@@ -116,7 +116,7 @@ if ( ! function_exists( 'bd324_prototype_hall_caption_width' ) ) :
 	 * than the column (or the phone) pushes the page sideways. Without it the
 	 * figure sizes like a block image: capped by the column, then by its parent.
 	 *
-	 * @since PrototypeHall 0.1.0
+	 * @since PrototypeHall 1.0.0
 	 *
 	 * @return int Zero, which tells core to omit the style attribute.
 	 */
@@ -134,7 +134,7 @@ if ( ! function_exists( 'bd324_prototype_hall_comment_form_heading' ) ) :
 	 * follow the post's h1 directly and skip a level. style.css keeps the h3
 	 * size.
 	 *
-	 * @since PrototypeHall 0.1.0
+	 * @since PrototypeHall 1.0.0
 	 *
 	 * @param array $defaults The comment form arguments.
 	 * @return array
@@ -154,7 +154,7 @@ if ( ! function_exists( 'bd324_prototype_hall_focusable_pre' ) ) :
 	 * Code never wraps (see foundation.css), so a long line scrolls sideways,
 	 * and a keyboard user can only scroll a region that takes focus.
 	 *
-	 * @since PrototypeHall 0.1.0
+	 * @since PrototypeHall 1.0.0
 	 *
 	 * @param string $content The post content or comment text.
 	 * @return string
@@ -187,7 +187,7 @@ if ( ! function_exists( 'bd324_prototype_hall_blog_home_title' ) ) :
 	 * Settings > Reading, keeping the block's heading level, font size and
 	 * classes so the template still decides how it looks.
 	 *
-	 * @since PrototypeHall 0.1.0
+	 * @since PrototypeHall 1.0.0
 	 *
 	 * @param string $block_content The rendered block, empty off archives.
 	 * @param array  $block         The parsed block.
@@ -236,7 +236,7 @@ if ( ! function_exists( 'bd324_prototype_hall_js_flag' ) ) :
 	 * visible at every width and the buttons stay hidden, so a visitor without
 	 * JavaScript is never left without a menu.
 	 *
-	 * @since PrototypeHall 0.1.0
+	 * @since PrototypeHall 1.0.0
 	 *
 	 * @return void
 	 */

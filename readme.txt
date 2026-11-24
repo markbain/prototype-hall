@@ -3,7 +3,7 @@ Contributors: bain
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.1.0
+Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: full-site-editing, block-patterns, one-column, wide-blocks, editor-style, translation-ready, custom-colors, style-variations
@@ -60,5 +60,5 @@ PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 == Changelog ==
 
-= 0.1.0 =
+= 1.0.0 =
 * Initial release.

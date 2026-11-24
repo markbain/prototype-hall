@@ -7,7 +7,7 @@
  * Description: Ground band for the index fallback: a mono label, the display headline and a lead line.
  *
  * @package PrototypeHall
- * @since PrototypeHall 0.1.0
+ * @since PrototypeHall 1.0.0
  */
 
 ?>
