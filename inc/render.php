@@ -161,8 +161,12 @@ add_filter( 'render_block_core/query-pagination-numbers', 'bd324_prototype_hall_
 
 if ( ! function_exists( 'bd324_prototype_hall_result_count' ) ) :
 	/**
-	 * Fills the %d in the archive and search count lines with the number of
-	 * posts the main query found.
+	 * Writes the archive count line ("1 post", "12 posts") in place of the
+	 * pattern's placeholder, and fills the %d in the search count line, from
+	 * the number of posts the main query found.
+	 *
+	 * The archive line is built here, not in the pattern, so it can take the
+	 * plural form the number needs.
 	 *
 	 * @since PrototypeHall 1.0.0
 	 *
@@ -171,15 +175,33 @@ if ( ! function_exists( 'bd324_prototype_hall_result_count' ) ) :
 	 * @return string
 	 */
 	function bd324_prototype_hall_result_count( $content, $block ) {
-		if ( false === strpos( $content, '%d' ) ) {
-			return $content;
-		}
-		if ( ! bd324_prototype_hall_has_class( $block, 'c-archive-count' ) && ! bd324_prototype_hall_has_class( $block, 'c-search-count' ) ) {
+		$archive = bd324_prototype_hall_has_class( $block, 'c-archive-count' );
+		if ( ! $archive && ! bd324_prototype_hall_has_class( $block, 'c-search-count' ) ) {
 			return $content;
 		}
 
 		global $wp_query;
 		$found = $wp_query ? (int) $wp_query->found_posts : 0;
+
+		if ( $archive ) {
+			$line = sprintf(
+				/* translators: %s: number of posts in the archive. */
+				_n( '%s post', '%s posts', $found, 'prototype-hall' ),
+				number_format_i18n( $found )
+			);
+			return (string) preg_replace_callback(
+				'/(<p\b[^>]*>).*?(<\/p>)/s',
+				function ( $m ) use ( $line ) {
+					return $m[1] . esc_html( $line ) . $m[2];
+				},
+				$content,
+				1
+			);
+		}
+
+		if ( false === strpos( $content, '%d' ) ) {
+			return $content;
+		}
 		return str_replace( '%d', number_format_i18n( $found ), $content );
 	}
 endif;

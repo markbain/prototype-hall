@@ -20,10 +20,7 @@
 		<!-- wp:query-title {"type":"archive","level":1,"fontSize":"display"} /-->
 
 		<!-- wp:paragraph {"className":"c-label c-archive-count"} -->
-		<p class="c-label c-archive-count"><?php
-			/* translators: %d: number of posts in the archive. */
-			esc_html_e( '%d posts', 'prototype-hall' );
-		?></p>
+		<p class="c-label c-archive-count"><?php esc_html_e( '[Number of posts]', 'prototype-hall' ); ?></p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:term-description {"className":"c-lead","fontSize":"lead"} /-->
