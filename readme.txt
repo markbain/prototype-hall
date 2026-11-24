@@ -44,12 +44,6 @@ beside the fonts in assets/fonts.
   License: SIL Open Font License 1.1, https://openfontlicense.org
   Source: https://github.com/googlefonts/dm-mono
 
-== Sign-up row ==
-
-The sign-up row is a placeholder. No newsletter service is wired in, the form
-sends nowhere, and the consent line is placeholder text. Point the form at a
-handler of your own, or replace it with a form plugin's block.
-
 == Copyright ==
 
 PrototypeHall WordPress Theme, (C) 2026 Bain Design.

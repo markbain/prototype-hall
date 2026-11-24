@@ -1,8 +1,7 @@
 /**
- * Theme behaviour: the menu panel, the search modal, the ticker, and the
- * sign-up placeholder. No dependencies. The markup works without it: the
- * navigation stays visible and the buttons stay hidden (see the has-js class,
- * set in the document head).
+ * Theme behaviour: the menu panel, the search modal and the ticker. No
+ * dependencies. The markup works without it: the navigation stays visible and
+ * the buttons stay hidden (see the has-js class, set in the document head).
  */
 ( function () {
 	'use strict';
@@ -206,15 +205,4 @@
 	if ( reduce && reduce.addEventListener ) {
 		reduce.addEventListener( 'change', setupTicker );
 	}
-
-	// The sign-up row is a placeholder: no service is wired in, so the form
-	// goes nowhere. Wire a handler to its action, or replace the form.
-	Array.prototype.forEach.call( document.querySelectorAll( '.c-signup__form:not([action*="://"])' ), function ( form ) {
-		if ( form.getAttribute( 'action' ) ) {
-			return;
-		}
-		form.addEventListener( 'submit', function ( event ) {
-			event.preventDefault();
-		} );
-	} );
 }() );

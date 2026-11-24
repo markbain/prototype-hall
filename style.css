@@ -743,16 +743,6 @@ html.has-scroll-lock { overflow: hidden; }
 .c-signup__text > * { margin: 0; }
 .c-signup__text > * + * { margin-top: 0.75rem; }
 .c-signup__text p:last-child { max-width: 34ch; }
-.c-signup__form { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 1rem 1.25rem; }
-.c-signup__field { display: flex; flex-direction: column; gap: 0.5rem; flex: 1 1 16rem; }
-.c-signup__field label { color: inherit; }
-.c-signup__msg { flex-basis: 100%; margin: 0; }
-.c-signup__msg:empty { display: none; }
-.c-signup__msg.is-success { display: inline-block; flex-basis: auto; padding: 0.5rem 0.875rem; background: var(--pop); color: var(--on-pop); border: 2px solid var(--ink); }
-.c-signup__msg.is-error { display: inline-block; flex-basis: auto; padding: 0.5rem 0.875rem; border: 4px solid var(--ink); }
-.c-signup__msg.is-error::before { content: "■ "; }
-.c-signup__consent { margin: 1rem 0 0; }
-.c-signup__submit { align-self: flex-end; }
 @media (max-width: 48em) {
   .c-statement__inner,
   .c-signup__inner { grid-template-columns: minmax(0, 1fr); }
