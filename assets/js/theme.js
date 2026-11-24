@@ -169,9 +169,17 @@
 	}
 
 	// Ticker: double the items for a seamless loop, hide the copy from
-	// assistive technology, and pause on hover or focus (CSS). Skipped under
-	// reduced motion, where the lines stay wrapped and still.
+	// assistive technology, and add a Pause/Play button so the motion can be
+	// stopped from the keyboard (WCAG 2.2.2); it also pauses on hover (CSS).
+	// Skipped under reduced motion, where the lines stay wrapped and still and
+	// there is nothing to pause.
 	var reduce = window.matchMedia && window.matchMedia( '(prefers-reduced-motion: reduce)' );
+	var words = window.bd324PrototypeHallTicker || {};
+	var setToggle = function ( ticker, button, paused ) {
+		ticker.classList.toggle( 'is-paused', paused );
+		button.textContent = paused ? ( words.play || 'Play' ) : ( words.pause || 'Pause' );
+		button.setAttribute( 'aria-label', paused ? ( words.playLabel || 'Play announcements' ) : ( words.pauseLabel || 'Pause announcements' ) );
+	};
 	var setupTicker = function () {
 		Array.prototype.forEach.call( document.querySelectorAll( '.c-ticker' ), function ( ticker ) {
 			var track = ticker.querySelector( '.c-ticker__track' );
@@ -179,8 +187,12 @@
 			if ( ! track ) {
 				return;
 			}
+			var toggle = ticker.querySelector( '.c-ticker__toggle' );
 			if ( reduce && reduce.matches ) {
-				ticker.classList.remove( 'is-looping' );
+				ticker.classList.remove( 'is-looping', 'is-paused' );
+				if ( toggle ) {
+					toggle.parentNode.removeChild( toggle );
+				}
 				if ( track.hasAttribute( 'data-looped' ) ) {
 					Array.prototype.forEach.call( track.querySelectorAll( '[data-clone]' ), function ( node ) {
 						node.parentNode.removeChild( node );
@@ -199,6 +211,16 @@
 				track.setAttribute( 'data-looped', '' );
 			}
 			ticker.classList.add( 'is-looping' );
+			if ( ! toggle ) {
+				toggle = document.createElement( 'button' );
+				toggle.type = 'button';
+				toggle.className = 'c-ticker__toggle c-label';
+				toggle.addEventListener( 'click', function () {
+					setToggle( ticker, toggle, ! ticker.classList.contains( 'is-paused' ) );
+				} );
+				ticker.appendChild( toggle );
+				setToggle( ticker, toggle, false );
+			}
 		} );
 	};
 	setupTicker();

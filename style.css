@@ -80,7 +80,10 @@ Tags: full-site-editing, block-patterns, one-column, wide-blocks, editor-style, 
   text-decoration: none;
   margin: 0;
 }
-.c-wordmark { max-inline-size: 6em; text-wrap: balance; }
+/* Two lines for a short title, as the brief draws it; a long title takes more
+   width before it wraps, and a word too long for the column breaks rather than
+   pushing the page sideways. */
+.c-wordmark { max-inline-size: 10em; text-wrap: balance; overflow-wrap: anywhere; }
 .c-wordmark a:hover { text-decoration: none; }
 .c-brand { display: flex; align-items: center; justify-content: center; gap: 0.75rem; }
 .c-brand:has(.custom-logo) .wp-block-site-title { display: none; }
@@ -684,8 +687,8 @@ html.has-scroll-lock { overflow: hidden; }
 
 /* --- Ticker ----------------------------------------------------------------------
    One mono line travelling right to left. The script doubles the items (the
-   copy is hidden from assistive technology) and adds .is-looping; without it,
-   and under reduced motion, the lines wrap and stay still. */
+   copy is hidden from assistive technology), adds .is-looping and a Pause/Play
+   button; without it, and under reduced motion, the lines wrap and stay still. */
 .c-ticker { overflow: hidden; border-block: 2px solid var(--ink); padding-inline: var(--gut); }
 .c-ticker__track {
   display: flex;
@@ -707,7 +710,27 @@ html.has-scroll-lock { overflow: hidden; }
 }
 .c-ticker.is-looping .c-ticker__track li:last-child::after { content: "■"; }
 .c-ticker.is-looping:hover .c-ticker__track,
-.c-ticker.is-looping:focus-within .c-ticker__track { animation-play-state: paused; }
+.c-ticker.is-paused .c-ticker__track { animation-play-state: paused; }
+/* The Pause/Play button the script adds: a mono label on the deep ground,
+   pinned to the strip's right end over the travelling lines. The ring is
+   drawn inside it, since the strip clips anything outside. */
+.c-ticker { position: relative; }
+.c-ticker__toggle {
+  position: absolute;
+  inset-block: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding-inline: 1rem;
+  border: 0;
+  border-left: 2px solid currentColor;
+  border-radius: 0;
+  background-color: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.c-ticker__toggle:hover { text-decoration: underline; text-decoration-thickness: 0.15em; }
+.c-ticker__toggle:focus-visible { outline-offset: -6px; }
 @keyframes c-tick { to { transform: translateX(-50%); } }
 
 /* --- Statement band and open call -------------------------------------------------- */
@@ -976,6 +999,8 @@ html.has-scroll-lock { overflow: hidden; }
   padding-top: var(--wp--preset--spacing--50);
 }
 .c-footer__base > * { margin: 0; }
+.c-footer__copy { display: flex; gap: 0.5em; }
+.c-footer__copy > * { margin: 0; }
 .c-list-plain,
 .c-list-plain ul { list-style: none; margin: 0; padding: 0; }
 .c-footer .wp-block-categories li:nth-child(n+7) { display: none; }

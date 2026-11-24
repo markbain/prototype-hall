@@ -68,9 +68,15 @@ $home = esc_url( home_url( '/' ) );
 
 		<!-- wp:group {"className":"c-footer__base","layout":{"type":"default"}} -->
 		<div class="wp-block-group c-footer__base">
-			<!-- wp:paragraph {"className":"c-label"} -->
-			<p class="c-label"><?php esc_html_e( '© [YEAR] [SITE NAME]', 'prototype-hall' ); ?></p>
-			<!-- /wp:paragraph -->
+			<!-- wp:group {"className":"c-footer__copy","layout":{"type":"default"}} -->
+			<div class="wp-block-group c-footer__copy">
+				<!-- wp:paragraph {"className":"c-label"} -->
+				<p class="c-label"><?php echo esc_html_x( '©', 'copyright sign before the site title in the footer', 'prototype-hall' ); ?></p>
+				<!-- /wp:paragraph -->
+
+				<!-- wp:site-title {"level":0,"isLink":false,"className":"c-label"} /-->
+			</div>
+			<!-- /wp:group -->
 
 			<!-- wp:paragraph {"className":"c-label"} -->
 			<p class="c-label"><?php esc_html_e( '[FOOTER CREDIT]', 'prototype-hall' ); ?></p>
