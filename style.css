@@ -743,9 +743,11 @@ html.has-scroll-lock { overflow: hidden; }
 .c-signup__text > * { margin: 0; }
 .c-signup__text > * + * { margin-top: 0.75rem; }
 .c-signup__text p:last-child { max-width: 34ch; }
+.c-signup__action .wp-block-buttons { justify-content: flex-end; }
 @media (max-width: 48em) {
   .c-statement__inner,
   .c-signup__inner { grid-template-columns: minmax(0, 1fr); }
+  .c-signup__action .wp-block-buttons { justify-content: flex-start; }
 }
 
 /* --- Title bands -------------------------------------------------------------------------- */
