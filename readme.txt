@@ -35,8 +35,14 @@ Both families are bundled with the theme, so no request goes to a font service.
 Each is licensed under the SIL Open Font License 1.1, and the licence files sit
 beside the fonts in assets/fonts.
 
-* Bricolage Grotesque, by the Bricolage Grotesque Project Authors: https://github.com/ateliertriay/bricolage
-* DM Mono, by the DM Mono Project Authors: https://github.com/googlefonts/dm-mono
+* Bricolage Grotesque
+  Copyright 2022 The Bricolage Grotesque Project Authors
+  License: SIL Open Font License 1.1, https://openfontlicense.org
+  Source: https://github.com/ateliertriay/bricolage
+* DM Mono
+  Copyright 2020 The DM Mono Project Authors
+  License: SIL Open Font License 1.1, https://openfontlicense.org
+  Source: https://github.com/googlefonts/dm-mono
 
 == Sign-up row ==
 
@@ -57,6 +63,11 @@ version.
 This program is distributed in the hope that it will be useful, but WITHOUT ANY
 WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
 PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+Screenshot
+The screenshot is original work created for this theme, (C) 2026 Bain Design,
+distributed under the same GPL licence as the theme. It contains no third-party
+images.
 
 == Changelog ==
 
