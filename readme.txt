@@ -1,23 +1,48 @@
 === PrototypeHall ===
-Contributors: bain
-Requires at least: 6.6
+Contributors: markcbain
+Requires at least: 7.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.1.0
+Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: full-site-editing, block-patterns, one-column, wide-blocks, editor-style, translation-ready
+Tags: full-site-editing, block-patterns, one-column, wide-blocks, editor-style, translation-ready, custom-colors, style-variations
 
 == Description ==
 
-The Bain Theme Factory block theme prototype-hall. Deliberately undesigned:
-monochrome, Comic Sans, grey placeholder boxes. Every factory theme starts as a
-copy of it. It is never submitted itself.
+PrototypeHall is a loud, flat, typographic block theme for a studio, lab,
+gallery or journal that wants its work to look like a printed specimen sheet.
+The page is divided into slabs of flat colour: a saturated ground for the
+header and title bands, off-white paper for reading, and a near-black deep
+ground for the footer, the open menu and the search modal. Nothing is glossy,
+nothing is rounded, and every shadow is hard.
+
+* A heavy grotesque against uppercase mono labels.
+* Two-pixel borders with hard offset shadows on anything that is an object.
+* A saturated ground with a slowly turning ring of rays around a striped sun.
+
+It ships three palettes, bubblegum pink by default and acid lime and
+ultraviolet as style variations, two post layouts (grid and list) switchable in
+the editor, a header with a menu panel and a search modal, a ticker strip, a
+statement band with an open call card, and a sign-up row. Every pattern is
+built from blocks; no sample posts or photographs are included.
+
+Named after the Culture ship *Contents May Differ* in Iain M. Banks's *The Hydrogen Sonata*.
 
 == Fonts ==
 
-No fonts are bundled. The theme uses the system Comic Sans MS stack, falling
-back to cursive.
+Both families are bundled with the theme, so no request goes to a font service.
+Each is licensed under the SIL Open Font License 1.1, and the licence files sit
+beside the fonts in assets/fonts.
+
+* Bricolage Grotesque
+  Copyright 2022 The Bricolage Grotesque Project Authors
+  License: SIL Open Font License 1.1, https://openfontlicense.org
+  Source: https://github.com/ateliertriay/bricolage
+* DM Mono
+  Copyright 2020 The DM Mono Project Authors
+  License: SIL Open Font License 1.1, https://openfontlicense.org
+  Source: https://github.com/googlefonts/dm-mono
 
 == Copyright ==
 
@@ -33,7 +58,12 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY
 WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
 PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
+Screenshot
+The screenshot is original work created for this theme, (C) 2026 Bain Design,
+distributed under the same GPL licence as the theme. It contains no third-party
+images.
+
 == Changelog ==
 
-= 0.1.0 =
-* Initial prototype-hall, forked from the bones of Broadsheet.
+= 1.0.0 =
+* Initial release.

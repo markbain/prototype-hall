@@ -1,0 +1,111 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Ultraviolet",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "ground",
+					"color": "#5E2EF2",
+					"name": "Ground"
+				},
+				{
+					"slug": "on-ground",
+					"color": "#F5F6F8",
+					"name": "On ground"
+				},
+				{
+					"slug": "paper",
+					"color": "#F5F6F8",
+					"name": "Paper"
+				},
+				{
+					"slug": "paper-2",
+					"color": "#E4E7EC",
+					"name": "Paper 2"
+				},
+				{
+					"slug": "ink",
+					"color": "#12082E",
+					"name": "Ink"
+				},
+				{
+					"slug": "muted",
+					"color": "#3F3858",
+					"name": "Muted"
+				},
+				{
+					"slug": "deep",
+					"color": "#12082E",
+					"name": "Deep"
+				},
+				{
+					"slug": "on-deep",
+					"color": "#F5F6F8",
+					"name": "On deep"
+				},
+				{
+					"slug": "deep-label",
+					"color": "#B9A6FF",
+					"name": "Deep label"
+				},
+				{
+					"slug": "deep-muted",
+					"color": "#B4AAD0",
+					"name": "Deep muted"
+				},
+				{
+					"slug": "deep-para",
+					"color": "#D5CCF0",
+					"name": "Deep paragraph"
+				},
+				{
+					"slug": "deep-rule",
+					"color": "#3A2B7A",
+					"name": "Deep rule"
+				},
+				{
+					"slug": "pop",
+					"color": "#5E2EF2",
+					"name": "Pop"
+				},
+				{
+					"slug": "on-pop",
+					"color": "#F5F6F8",
+					"name": "On pop"
+				},
+				{
+					"slug": "ray",
+					"color": "#F5F6F8",
+					"name": "Ray"
+				},
+				{
+					"slug": "frame",
+					"color": "#F5F6F8",
+					"name": "Frame"
+				},
+				{
+					"slug": "frame-edge",
+					"color": "#12082E",
+					"name": "Frame edge"
+				},
+				{
+					"slug": "focus",
+					"color": "#12082E",
+					"name": "Focus"
+				},
+				{
+					"slug": "focus-on-ground",
+					"color": "#F5F6F8",
+					"name": "Focus on ground"
+				},
+				{
+					"slug": "focus-on-deep",
+					"color": "#F5F6F8",
+					"name": "Focus on deep"
+				}
+			]
+		}
+	}
+}
