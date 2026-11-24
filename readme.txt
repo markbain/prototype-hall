@@ -1,5 +1,5 @@
 === PrototypeHall ===
-Contributors: bain
+Contributors: markcbain
 Requires at least: 7.0
 Tested up to: 7.1
 Requires PHP: 7.4
