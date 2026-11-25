@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package PrototypeHall
- * @since PrototypeHall 0.1.0
+ * @since PrototypeHall 1.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -21,7 +21,7 @@ if ( ! function_exists( 'bd324_prototype_hall_enqueue_styles' ) ) :
 	 * of style.css, which fixes the load order: reset / base / layout (layered)
 	 * first, components (unlayered) second. See the wp-block-theme skill, "The layer contract".
 	 *
-	 * @since PrototypeHall 0.1.0
+	 * @since PrototypeHall 1.0.0
 	 *
 	 * @return void
 	 */
@@ -51,6 +51,27 @@ if ( ! function_exists( 'bd324_prototype_hall_enqueue_styles' ) ) :
 			'path',
 			get_parent_theme_file_path( 'style.css' )
 		);
+
+		wp_enqueue_script(
+			'bd324-prototype-hall-theme',
+			get_parent_theme_file_uri( 'assets/js/theme.js' ),
+			array(),
+			$version,
+			array(
+				'strategy'  => 'defer',
+				'in_footer' => true,
+			)
+		);
+		wp_add_inline_script(
+			'bd324-prototype-hall-theme',
+			'var bd324PrototypeHallTicker = ' . wp_json_encode(
+				array(
+					'pauseLabel' => __( 'Pause announcements', 'prototype-hall' ),
+					'playLabel'  => __( 'Play announcements', 'prototype-hall' ),
+				)
+			) . ';',
+			'before'
+		);
 	}
 endif;
 add_action( 'wp_enqueue_scripts', 'bd324_prototype_hall_enqueue_styles' );
@@ -60,7 +81,7 @@ if ( ! function_exists( 'bd324_prototype_hall_editor_style' ) ) :
 	 * Enqueues the same two stylesheets in the editors, so what an editor sees
 	 * matches the front end.
 	 *
-	 * @since PrototypeHall 0.1.0
+	 * @since PrototypeHall 1.0.0
 	 *
 	 * @return void
 	 */
@@ -79,7 +100,7 @@ if ( ! function_exists( 'bd324_prototype_hall_pattern_categories' ) ) :
 	/**
 	 * Registers the theme's pattern category.
 	 *
-	 * @since PrototypeHall 0.1.0
+	 * @since PrototypeHall 1.0.0
 	 *
 	 * @return void
 	 */
@@ -105,7 +126,7 @@ if ( ! function_exists( 'bd324_prototype_hall_caption_width' ) ) :
 	 * than the column (or the phone) pushes the page sideways. Without it the
 	 * figure sizes like a block image: capped by the column, then by its parent.
 	 *
-	 * @since PrototypeHall 0.1.0
+	 * @since PrototypeHall 1.0.0
 	 *
 	 * @return int Zero, which tells core to omit the style attribute.
 	 */
@@ -123,7 +144,7 @@ if ( ! function_exists( 'bd324_prototype_hall_comment_form_heading' ) ) :
 	 * follow the post's h1 directly and skip a level. style.css keeps the h3
 	 * size.
 	 *
-	 * @since PrototypeHall 0.1.0
+	 * @since PrototypeHall 1.0.0
 	 *
 	 * @param array $defaults The comment form arguments.
 	 * @return array
@@ -143,7 +164,7 @@ if ( ! function_exists( 'bd324_prototype_hall_focusable_pre' ) ) :
 	 * Code never wraps (see foundation.css), so a long line scrolls sideways,
 	 * and a keyboard user can only scroll a region that takes focus.
 	 *
-	 * @since PrototypeHall 0.1.0
+	 * @since PrototypeHall 1.0.0
 	 *
 	 * @param string $content The post content or comment text.
 	 * @return string
@@ -176,7 +197,7 @@ if ( ! function_exists( 'bd324_prototype_hall_blog_home_title' ) ) :
 	 * Settings > Reading, keeping the block's heading level, font size and
 	 * classes so the template still decides how it looks.
 	 *
-	 * @since PrototypeHall 0.1.0
+	 * @since PrototypeHall 1.0.0
 	 *
 	 * @param string $block_content The rendered block, empty off archives.
 	 * @param array  $block         The parsed block.
@@ -215,3 +236,25 @@ if ( ! function_exists( 'bd324_prototype_hall_blog_home_title' ) ) :
 	}
 endif;
 add_filter( 'render_block_core/query-title', 'bd324_prototype_hall_blog_home_title', 10, 2 );
+
+if ( ! function_exists( 'bd324_prototype_hall_js_flag' ) ) :
+	/**
+	 * Marks the document as scripted before first paint.
+	 *
+	 * The menu and search buttons, and the panel and dialog they open, exist
+	 * only when the theme script runs. Without this class the navigation stays
+	 * visible at every width and the buttons stay hidden, so a visitor without
+	 * JavaScript is never left without a menu.
+	 *
+	 * @since PrototypeHall 1.0.0
+	 *
+	 * @return void
+	 */
+	function bd324_prototype_hall_js_flag() {
+		wp_print_inline_script_tag( "document.documentElement.classList.add('has-js');" );
+	}
+endif;
+add_action( 'wp_head', 'bd324_prototype_hall_js_flag', 1 );
+
+require get_parent_theme_file_path( 'inc/block-styles.php' );
+require get_parent_theme_file_path( 'inc/render.php' );
