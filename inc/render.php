@@ -50,7 +50,12 @@ if ( ! function_exists( 'bd324_prototype_hall_thumb_fallback' ) ) :
 
 		$post_id = $instance && isset( $instance->context['postId'] ) ? (int) $instance->context['postId'] : get_the_ID();
 		$title   = trim( wp_strip_all_tags( get_the_title( $post_id ) ) );
-		$initial = '' !== $title ? mb_strtoupper( mb_substr( $title, 0, 1 ) ) : '–';
+		$initial = '–';
+		if ( '' !== $title ) {
+			// mb_substr() is polyfilled by core; mb_strtoupper() is not, and mbstring is optional.
+			$initial = mb_substr( $title, 0, 1 );
+			$initial = function_exists( 'mb_strtoupper' ) ? mb_strtoupper( $initial ) : strtoupper( $initial );
+		}
 		$wide    = bd324_prototype_hall_has_class( $block, 'c-thumb--wide' ) ? ' c-thumb--wide' : '';
 
 		return sprintf(
@@ -161,11 +166,11 @@ add_filter( 'render_block_core/query-pagination-numbers', 'bd324_prototype_hall_
 
 if ( ! function_exists( 'bd324_prototype_hall_result_count' ) ) :
 	/**
-	 * Writes the archive count line ("1 post", "12 posts") in place of the
-	 * pattern's placeholder, and fills the %d in the search count line, from
-	 * the number of posts the main query found.
+	 * Writes the archive count line ("1 post", "12 posts") and the search count
+	 * line ("Search results · 3 found") in place of the patterns' placeholders,
+	 * from the number of posts the main query found.
 	 *
-	 * The archive line is built here, not in the pattern, so it can take the
+	 * Both lines are built here, not in the patterns, so they can take the
 	 * plural form the number needs.
 	 *
 	 * @since PrototypeHall 1.0.0
@@ -189,20 +194,22 @@ if ( ! function_exists( 'bd324_prototype_hall_result_count' ) ) :
 				_n( '%s post', '%s posts', $found, 'prototype-hall' ),
 				number_format_i18n( $found )
 			);
-			return (string) preg_replace_callback(
-				'/(<p\b[^>]*>).*?(<\/p>)/s',
-				function ( $m ) use ( $line ) {
-					return $m[1] . esc_html( $line ) . $m[2];
-				},
-				$content,
-				1
+		} else {
+			$line = sprintf(
+				/* translators: %s: number of search results. */
+				_n( 'Search results · %s found', 'Search results · %s found', $found, 'prototype-hall' ),
+				number_format_i18n( $found )
 			);
 		}
 
-		if ( false === strpos( $content, '%d' ) ) {
-			return $content;
-		}
-		return str_replace( '%d', number_format_i18n( $found ), $content );
+		return (string) preg_replace_callback(
+			'/(<p\b[^>]*>).*?(<\/p>)/s',
+			function ( $m ) use ( $line ) {
+				return $m[1] . esc_html( $line ) . $m[2];
+			},
+			$content,
+			1
+		);
 	}
 endif;
 add_filter( 'render_block_core/paragraph', 'bd324_prototype_hall_result_count', 10, 2 );

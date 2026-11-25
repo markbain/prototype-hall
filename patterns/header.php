@@ -88,9 +88,15 @@ $home = esc_url( home_url( '/' ) );
 				</div>
 				<!-- /wp:group -->
 
-				<!-- wp:paragraph {"className":"c-label c-menu-panel__base"} -->
-				<p class="c-label c-menu-panel__base"><?php esc_html_e( '© [YEAR] [SITE NAME]', 'prototype-hall' ); ?></p>
-				<!-- /wp:paragraph -->
+				<!-- wp:group {"className":"c-menu-panel__base c-copy","layout":{"type":"default"}} -->
+				<div class="wp-block-group c-menu-panel__base c-copy">
+					<!-- wp:paragraph {"className":"c-label"} -->
+					<p class="c-label"><?php echo esc_html_x( '©', 'copyright sign before the site title', 'prototype-hall' ); ?></p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:site-title {"level":0,"isLink":false,"className":"c-label"} /-->
+				</div>
+				<!-- /wp:group -->
 			</div>
 			<!-- /wp:group -->
 		</div>
