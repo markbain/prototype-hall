@@ -3,7 +3,7 @@ Contributors: markcbain
 Requires at least: 7.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: full-site-editing, block-patterns, one-column, wide-blocks, editor-style, translation-ready, custom-colors, style-variations
@@ -64,6 +64,13 @@ distributed under the same GPL licence as the theme. It contains no third-party
 images.
 
 == Changelog ==
+
+= 1.0.1 =
+* The Menu button shows at every width, so the menu panel is reachable on desktop.
+* The menu panel's copyright line shows the site title.
+* The footer lists every category.
+* The search results count can be translated with plural forms.
+* The initial tile no longer needs the PHP mbstring extension.
 
 = 1.0.0 =
 * Initial release.

@@ -6,7 +6,7 @@ Description: A loud, flat, typographic block theme that sets a site like a print
 Requires at least: 7.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Version: 1.0.0
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: prototype-hall
@@ -330,11 +330,12 @@ input[type="radio"]:disabled { border-color: var(--muted); background: var(--pap
 .c-nav--secondary { justify-content: flex-end; }
 
 /* Without the script there are no buttons: the navigation wraps below the
-   wordmark at every width. With it, wide screens show one secondary link and
-   a second one moves into the menu (the Menu button then shows at any width). */
+   wordmark at every width. With it, both buttons show at every width, so the
+   menu panel (its own navigation, links and search) is always in reach. Wide
+   screens show one secondary link; any more are in the menu. */
 .c-iconbtn { display: none; }
-.has-js .c-iconbtn--search { display: inline-flex; }
-.has-js .c-header:has(.c-nav--secondary .wp-block-navigation-item:nth-child(2)) .c-iconbtn--menu { display: inline-flex; }
+.has-js .c-iconbtn--search,
+.has-js .c-iconbtn--menu { display: inline-flex; }
 .c-nav--secondary .wp-block-navigation-item:nth-child(n+2) { display: none; }
 
 .c-iconbtn {
@@ -1014,11 +1015,11 @@ html.has-scroll-lock { overflow: hidden; }
   padding-top: var(--wp--preset--spacing--50);
 }
 .c-footer__base > * { margin: 0; }
-.c-footer__copy { display: flex; gap: 0.5em; }
-.c-footer__copy > * { margin: 0; }
+/* The copyright line, footer and menu panel: a © and the Site Title block. */
+.c-copy { display: flex; gap: 0.5em; }
+.c-copy > * { margin: 0; }
 .c-list-plain,
 .c-list-plain ul { list-style: none; margin: 0; padding: 0; }
-.c-footer .wp-block-categories li:nth-child(n+7) { display: none; }
 .c-footer .wp-block-categories a { display: inline-block; padding-block: 0.25rem; }
 
 /* --- Single post and page --------------------------------------------------------------------- */

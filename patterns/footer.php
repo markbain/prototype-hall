@@ -68,10 +68,10 @@ $home = esc_url( home_url( '/' ) );
 
 		<!-- wp:group {"className":"c-footer__base","layout":{"type":"default"}} -->
 		<div class="wp-block-group c-footer__base">
-			<!-- wp:group {"className":"c-footer__copy","layout":{"type":"default"}} -->
-			<div class="wp-block-group c-footer__copy">
+			<!-- wp:group {"className":"c-copy","layout":{"type":"default"}} -->
+			<div class="wp-block-group c-copy">
 				<!-- wp:paragraph {"className":"c-label"} -->
-				<p class="c-label"><?php echo esc_html_x( '©', 'copyright sign before the site title in the footer', 'prototype-hall' ); ?></p>
+				<p class="c-label"><?php echo esc_html_x( '©', 'copyright sign before the site title', 'prototype-hall' ); ?></p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:site-title {"level":0,"isLink":false,"className":"c-label"} /-->

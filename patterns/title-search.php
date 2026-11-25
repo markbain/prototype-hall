@@ -16,10 +16,7 @@
 	<!-- wp:group {"align":"wide","className":"c-title-band__inner","layout":{"type":"default"}} -->
 	<div class="wp-block-group alignwide c-title-band__inner">
 		<!-- wp:paragraph {"className":"c-label c-search-count"} -->
-		<p class="c-label c-search-count"><?php
-			/* translators: %d: number of search results. */
-			esc_html_e( 'Search results · %d found', 'prototype-hall' );
-		?></p>
+		<p class="c-label c-search-count"><?php esc_html_e( '[Number of results]', 'prototype-hall' ); ?></p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:query-title {"type":"search","level":1,"showPrefix":false,"fontSize":"display"} /-->
